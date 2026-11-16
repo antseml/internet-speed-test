@@ -7,9 +7,12 @@
 - общий объём скачанных данных;
 - среднюю скорость скачивания.
 
-Скрипт использует только стандартную библиотеку. Требуется Python 3.9 или новее.
+В репозитории есть две реализации без сторонних зависимостей:
 
-## Запуск
+- `speed_test.py` — Python 3.9 или новее;
+- `speed_test.js` — Node.js 18 или новее.
+
+## Запуск Python-версии
 
 ```bash
 python speed_test.py "https://example.com/large-image.jpg"
@@ -23,6 +26,18 @@ python speed_test.py URL --count 10 --timeout 30
 
 - `--count` — количество последовательных запросов (по умолчанию `10`);
 - `--timeout` — тайм-аут одного запроса в секундах (по умолчанию `30`).
+
+## Запуск Node.js-версии
+
+```bash
+node speed_test.js "https://example.com/large-image.jpg"
+```
+
+Необязательные параметры совпадают с Python-версией:
+
+```bash
+node speed_test.js URL --count 10 --timeout 30
+```
 
 ## Единицы измерения
 
